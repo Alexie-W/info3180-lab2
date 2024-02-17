@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF - 8">
+        <title> My Website - Profile</title>
+        <link rel = "stylesheet" href ="{{url_for('static', filename = 'css/app.css')}}"/>
+    </head>
+    {%extends 'base.html'%}
+
+    {%block main%}
+    <body>
+        <div class = "container"> 
+            <div class = "top">
+                <img src="{{url_for('static', filename = 'img/profile.jpg')}}"/>
+                <h1> Itachi Uchiha</h1>
+                <ul class = "profile-list">
+                    <li>@itUchiha</li>
+                    <li>Amegakure, Hidden Leaf</li>
+                    <li>{{date}}</li>
+                </ul>
+            </div>
+            <div class = "bottom">
+                <p>
+                    My name is Itachi Uchiha. I'm currently apart of the Anbu Black Ops team for the Hidden leaf Village.
+                    My father is the head of the police department while my mother mostly takes care of me and my younger 
+                    brother.
+                </p>
+                <ul class = "content-list">
+                    <li><span>3</span>Posts</li>
+                    <li id = "mid"><span>250</span>Following</li>
+                    <li><span>1M</span>Followers</li>
+                </ul>
+            </div>
+            <button>Follow</button>
+        </div>
+    </body>
+    {%endblock %}
+</html>
